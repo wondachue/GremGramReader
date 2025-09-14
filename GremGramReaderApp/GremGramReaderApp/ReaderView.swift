@@ -10,6 +10,8 @@ import SwiftData
 
 struct ReaderView: View {
     @Bindable var book: Book
+    @State private var selectedWord: String?
+    @State private var showWordSheet = false
     @State private var pageIndex: Int = 0
     private var isRTL: Bool {
         book.readingDirection == .rightToLeft
@@ -23,13 +25,13 @@ struct ReaderView: View {
             Spacer()
             TabView(selection: $pageIndex) {
                 ForEach(Array(book.pages.enumerated()), id: \.offset) { idx, page in
-                    ScrollView {
-                        Text(page)
-                            .font(.system(.body, design: .serif))
-                            .padding(.horizontal)
-                            .frame(maxWidth: .infinity, alignment: .leading)
-                            .textSelection(.enabled)
-                    }
+                    SelectableTextView(
+                        text: page,
+                        onWordTap: { word in
+                            selectedWord = word
+                            showWordSheet = true
+                        }
+                    )
                     .tag(idx)
                 }
             }
@@ -56,6 +58,10 @@ struct ReaderView: View {
                 }
                 .disabled(isRTL ? pageIndex == 0 : pageIndex >= book.pages.count - 1)
             }
+        }
+        .padding()
+        .sheet(isPresented: $showWordSheet) {
+            WordSheet(word: selectedWord ?? "", languageCode: book.language)
         }
     }
 
