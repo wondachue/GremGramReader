@@ -10,6 +10,18 @@
             "state" : "new",
             "value" : "Add a book"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ajouter un livre"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "本を追加"
+          }
         }
       }
     },
@@ -21,6 +33,18 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Image of a magical book"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Image d’un livre magique"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "魔法の本の画像"
           }
         }
       }
@@ -34,6 +58,18 @@
             "state" : "new",
             "value" : "%lld pages"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld pages"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld ページ"
+          }
         }
       }
     },
@@ -45,6 +81,18 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Import a .txt file to start reading."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Importez un fichier .txt pour commencer à lire."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "読み始めるには .txt ファイルを取り込んでください。"
           }
         }
       }
@@ -58,6 +106,18 @@
             "state" : "new",
             "value" : "No books yet"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aucun livre pour le moment"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "まだ本がありません"
+          }
         }
       }
     },
@@ -69,6 +129,18 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Select a book"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sélectionnez un livre"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "本を選択"
           }
         }
       }
@@ -82,6 +154,18 @@
             "state" : "new",
             "value" : "Library"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bibliothèque"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ライブラリ"
+          }
         }
       }
     },
@@ -93,6 +177,18 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Continue to next page"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aller à la page suivante"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "次のページへ進む"
           }
         }
       }
@@ -106,6 +202,18 @@
             "state" : "new",
             "value" : "Page %1$lld of %2$lld"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Page %1$lld sur %2$lld"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%2$lld ページ中 %1$lld ページ目"
+          }
         }
       }
     },
@@ -117,6 +225,18 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Go back to previous page"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Revenir à la page précédente"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "前のページに戻る"
           }
         }
       }
@@ -130,6 +250,18 @@
             "state" : "new",
             "value" : "Copy"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Copier"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "コピー"
+          }
         }
       }
     },
@@ -141,6 +273,18 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Lookup with Dictionary"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rechercher dans le dictionnaire"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "辞書で調べる"
           }
         }
       }
@@ -154,6 +298,18 @@
             "state" : "new",
             "value" : "Invalid URL"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "URL non valide"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "無効なURLです"
+          }
         }
       }
     },
@@ -166,6 +322,18 @@
             "state" : "new",
             "value" : "Lookup with Safari"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rechercher avec Safari"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Safari で検索"
+          }
         }
       }
     },
@@ -177,6 +345,18 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Look up %@"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rechercher %@"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ を調べる"
           }
         }
       }
