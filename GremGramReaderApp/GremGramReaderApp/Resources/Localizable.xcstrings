@@ -1,9 +1,6 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
-    "·" : {
-
-    },
     "library.accessibility.addBook" : {
       "comment" : "Toolbar button to import a .txt file",
       "extractionState" : "extracted_with_value",

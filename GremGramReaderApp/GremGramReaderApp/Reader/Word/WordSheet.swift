@@ -110,17 +110,6 @@ struct WordSheet: View {
                         .padding(.vertical, 6)
                         .background(Capsule().fill(Color.secondary.opacity(0.15)))
                 }
-
-                // A subtle divider dot if language code exists
-                if languageCode != nil {
-                    Text("·")
-                        .foregroundStyle(.secondary)
-                        .font(.caption)
-                }
-
-                Text(word)
-                    .font(.caption)
-                    .foregroundStyle(.secondary)
             }
         }
     }
