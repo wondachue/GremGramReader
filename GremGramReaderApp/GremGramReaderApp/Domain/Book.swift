@@ -18,8 +18,8 @@ final class Book {
     init(timestamp: Date, title: String, text: String, language: String) {
         self.timestamp = timestamp
         self.title = title
-        self.pages = []
         self.language = language
+        self.pages = BookStore.paginate(text: text, targetChars: 1200)
     }
     
     var readingDirection: Locale.LanguageDirection {

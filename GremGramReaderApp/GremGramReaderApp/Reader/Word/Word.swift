@@ -22,6 +22,12 @@ enum Word {
         comment: "Button prompt to copy a word"
     )
     
+    static let speak: LocalizedStringResource = .init(
+        "word.speak",
+        defaultValue: "Speak",
+        comment: "Button prompt to listen to a word aloud"
+    )
+    
     enum Lookup {
         static let dictionary: LocalizedStringResource = .init(
             "word.lookup.dictionary",

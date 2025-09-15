@@ -34,7 +34,6 @@ final class BookStore {
                     let title = url.deletingPathExtension().lastPathComponent
 
                     let book = Book(timestamp: Date(), title: title, text: text, language: lang)
-                    book.pages = Self.paginate(text: text, targetChars: 1200)
 
                     imported.append(book)
                 } catch {
@@ -70,7 +69,7 @@ final class BookStore {
         return nil
     }
 
-    private static func paginate(text: String, targetChars: Int) -> [String] {
+    static func paginate(text: String, targetChars: Int) -> [String] {
         guard targetChars > 0 else { return [text] }
 
         var pages: [String] = []

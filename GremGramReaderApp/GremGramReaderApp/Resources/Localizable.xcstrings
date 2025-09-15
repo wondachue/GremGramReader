@@ -1,6 +1,9 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "·" : {
+
+    },
     "library.accessibility.addBook" : {
       "comment" : "Toolbar button to import a .txt file",
       "extractionState" : "extracted_with_value",
@@ -333,6 +336,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Safari で検索"
+          }
+        }
+      }
+    },
+    "word.speak" : {
+      "comment" : "Button prompt to listen to a word aloud",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Speak"
           }
         }
       }
