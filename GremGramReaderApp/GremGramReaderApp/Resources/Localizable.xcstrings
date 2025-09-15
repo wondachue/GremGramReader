@@ -1,0 +1,186 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "library.accessibility.addBook" : {
+      "comment" : "Toolbar button to import a .txt file",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Add a book"
+          }
+        }
+      }
+    },
+    "library.accessibility.bookImage" : {
+      "comment" : "A11y label for book image",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Image of a magical book"
+          }
+        }
+      }
+    },
+    "library.book.pages" : {
+      "comment" : "Number of pages in the book",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%lld pages"
+          }
+        }
+      }
+    },
+    "library.empty.subtitle" : {
+      "comment" : "Empty state subtitle prompt",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Import a .txt file to start reading."
+          }
+        }
+      }
+    },
+    "library.empty.title" : {
+      "comment" : "Empty state title when the library has no books",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "No books yet"
+          }
+        }
+      }
+    },
+    "library.selectABook" : {
+      "comment" : "Instruction for selecting a book from the library",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Select a book"
+          }
+        }
+      }
+    },
+    "library.title" : {
+      "comment" : "Navigation title for the library screen",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Library"
+          }
+        }
+      }
+    },
+    "reader.continueButton" : {
+      "comment" : "Button prompt to continue to next page",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Continue to next page"
+          }
+        }
+      }
+    },
+    "reader.pageCount" : {
+      "comment" : "Page count format string",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Page %1$lld of %2$lld"
+          }
+        }
+      }
+    },
+    "reader.previousButton" : {
+      "comment" : "Button prompt to go back a page",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Go back to previous page"
+          }
+        }
+      }
+    },
+    "word.copy" : {
+      "comment" : "Button prompt to copy a word",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Copy"
+          }
+        }
+      }
+    },
+    "word.lookup.dictionary" : {
+      "comment" : "Button prompt to look up a word with the dictionary",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Lookup with Dictionary"
+          }
+        }
+      }
+    },
+    "word.lookup.error" : {
+      "comment" : "Error text if lookup fails",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Invalid URL"
+          }
+        }
+      }
+    },
+    "word.lookup.web" : {
+      "comment" : "Button prompt to look up a word with the safari",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Lookup with Safari"
+          }
+        }
+      }
+    },
+    "word.title" : {
+      "comment" : "Title to word lookup popup",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Look up %@"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

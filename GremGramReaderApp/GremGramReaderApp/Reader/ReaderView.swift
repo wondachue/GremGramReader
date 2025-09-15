@@ -13,16 +13,18 @@ struct ReaderView: View {
     @State private var selectedWord: String?
     @State private var showWordSheet = false
     @State private var pageIndex: Int = 0
+    private var lastPage: Int {
+        book.pages.count - 1
+    }
+    private var firstPage: Int {
+        0
+    }
     private var isRTL: Bool {
         book.readingDirection == .rightToLeft
     }
     
     var body: some View {
         VStack(spacing: 0) {
-            if let lang = Locale.current.localizedString(forLanguageCode: book.language) {
-                Text("Language: \(lang)")
-            }
-            Spacer()
             TabView(selection: $pageIndex) {
                 ForEach(Array(book.pages.enumerated()), id: \.offset) { idx, page in
                     SelectableTextView(
@@ -44,11 +46,11 @@ struct ReaderView: View {
                 Button(action: isRTL ? nextPage : prevPage) {
                     Image(systemName: "chevron.left")
                 }
-                .disabled(isRTL ? pageIndex >= book.pages.count - 1 : pageIndex == 0)
-
+                .disabled(isRTL ? pageIndex >= lastPage : pageIndex == firstPage)
+                .accessibility(label: isRTL ? Text(Reader.Accessibility.continueButton) : Text(Reader.Accessibility.previousButton))
                 Spacer()
 
-                Text("\(pageIndex + 1) / \(book.pages.count)")
+                Text(Reader.pageCount(pageIndex, totalPages: book.pages.count))
                     .monospacedDigit()
 
                 Spacer()
@@ -56,7 +58,8 @@ struct ReaderView: View {
                 Button(action: isRTL ? prevPage : nextPage) {
                     Image(systemName: "chevron.right")
                 }
-                .disabled(isRTL ? pageIndex == 0 : pageIndex >= book.pages.count - 1)
+                .disabled(isRTL ? pageIndex == firstPage : pageIndex >= lastPage)
+                .accessibility(label: isRTL ? Text(Reader.Accessibility.continueButton) : Text(Reader.Accessibility.previousButton))
             }
         }
         .padding()

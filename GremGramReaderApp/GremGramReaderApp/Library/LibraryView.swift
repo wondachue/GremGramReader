@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  LibraryView.swift
 //  GremGramReaderApp
 //
 //  Created by Megan Dwyer on 9/14/25.
@@ -8,7 +8,7 @@
 import SwiftUI
 import SwiftData
 
-struct ContentView: View {
+struct LibraryView: View {
     @Environment(\.modelContext) private var modelContext
     @Query private var books: [Book]
     @State private var showImporter = false
@@ -17,7 +17,12 @@ struct ContentView: View {
         NavigationSplitView {
             List {
                 if books.isEmpty {
-                    Text("No items yet. Click the + to upload.")
+                    Image("book", label: Text(Library.Accessibility.bookImage))
+                    Text(Library.EmptyState.title)
+                        .font(.headline)
+                    Text(Library.EmptyState.subtitle)
+                        .font(.subheadline)
+                        .foregroundStyle(.secondary)
                 } else {
                     ForEach(books) { book in
                         NavigationLink {
@@ -25,7 +30,7 @@ struct ContentView: View {
                         } label: {
                             VStack(alignment: .leading, spacing: 4) {
                                 Text(book.title).font(.headline)
-                                Text("\(book.pages.count) pages")
+                                Text(Library.Book.pages(book.pages.count))
                                     .font(.subheadline)
                                     .foregroundStyle(.secondary)
                             }
@@ -34,19 +39,21 @@ struct ContentView: View {
                     .onDelete(perform: deleteBooks)
                 }
             }
-            .navigationTitle("Library")
+            .navigationTitle(Text(Library.title))
             .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
+                if !books.isEmpty {
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        EditButton()
+                    }
                 }
                 ToolbarItem {
                     Button(action: addBook) {
-                        Label("Add Book", systemImage: "plus")
-                    }
+                        Image(systemName: "plus")
+                    }.accessibility(label: Text(Library.Accessibility.addBook))
                 }
             }
         } detail: {
-            Text("Select a Book")
+            Text(Library.selectABook)
         }.fileImporter(
             isPresented: $showImporter,
             allowedContentTypes: [.plainText],
@@ -81,6 +88,6 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    LibraryView()
         .modelContainer(for: Book.self, inMemory: true)
 }

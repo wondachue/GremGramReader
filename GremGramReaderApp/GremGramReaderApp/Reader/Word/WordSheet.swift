@@ -21,16 +21,22 @@ struct WordSheet: View {
                 Text(word).font(.title2).bold()
 
                 HStack {
-                    Button("Look up with Dictionary") {
+                    Button {
                         showAppleDict = true
+                    } label: {
+                        Text(Word.Lookup.dictionary)
                     }
-                    Button("Look up with Safari") {
+                    Button {
                         showSafari = true
+                    } label: {
+                        Text(Word.Lookup.web)
                     }
                     .buttonStyle(.borderedProminent)
 
-                    Button("Copy Word") {
+                    Button {
                         UIPasteboard.general.string = word
+                    } label: {
+                        Text(Word.copy)
                     }
                     .buttonStyle(.bordered)
                 }
@@ -42,8 +48,11 @@ struct WordSheet: View {
             .navigationBarTitleDisplayMode(.inline)
         }
         .sheet(isPresented: $showSafari) {
-            let url = DictionaryLookupService.target(for: word, langCode: languageCode)
-            SafariView(url: url)
+            if let url = DictionaryLookupService.target(for: word, langCode: languageCode) {
+                SafariView(url: url)
+            } else {
+                Text(Word.Lookup.error)
+            }
         }
         .sheet(isPresented: $showAppleDict) {
             AppleDictionaryView(term: word)
